@@ -1,0 +1,22 @@
+ .content {
+    text-align: center;
+  }
+
+
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .carousel-item img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+  }

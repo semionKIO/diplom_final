@@ -1,0 +1,29 @@
+.alert-danger {
+ font-size: 1.2rem;
+    float: left;
+
+    width: 700px;
+    margin: 40px 20%;
+    text-align: left;
+}
+    .star-rating::before {
+        content: "★★★★★";
+        letter-spacing: 3px;
+        color: red;
+    }
+
+    .star-rating[data-rating="1"]::before { content: "★☆☆☆☆"; }
+    .star-rating[data-rating="2"]::before { content: "★★☆☆☆"; }
+    .star-rating[data-rating="3"]::before { content: "★★★☆☆"; }
+    .star-rating[data-rating="4"]::before { content: "★★★★☆"; }
+    .star-rating[data-rating="5"]::before { content: "★★★★★"; }
+
+.pp{
+    font-size: 0.8rem;}
+
+.btn-danger{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

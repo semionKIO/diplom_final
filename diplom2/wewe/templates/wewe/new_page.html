@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+{%load static%}
+<!--<link rel="stylesheet" href="{% static "main/style.css"%}">-->
+<!--{% url 'give_feedback'%}-->
+{% block head%}
+<link rel="stylesheet" href="{% static "main/index.css"%}">
+<link rel="stylesheet" href="{% static "wewe/new.css"%}">
+{% endblock %}
+{% block content%}
+<div class="container">
+    <h1>{{ we.title }}</h1>
+    <p>{{ we.text }}</p>
+    <div class="image-container">
+        <img src="/media/{{ we.left }}">
+        <img src="/media/{{ we.main }}">
+        <img src="/media/{{ we.right }}">
+    </div>
+    <p class="price">Стоимость <br>{{ we.prise }}</p>
+        <a href="{% url 'work_detail' we.worker.pk %}" class="btn btn-primary">Перейти к работнику</a>
+</div>
+{% endblock %}
+{% block script%}
+  <script src="{% static "main/index.js"%}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+

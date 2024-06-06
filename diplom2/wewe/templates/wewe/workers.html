@@ -1,0 +1,37 @@
+{% extends "main/base.html" %}
+{%load static%}
+<!--<link rel="stylesheet" href="{% static "main/style.css"%}">-->
+<!--{% url 'give_feedback'%}-->
+{% block head%}
+<link rel="stylesheet" href="{% static "main/index.css"%}">
+  <title>Работники</title>
+<link rel="stylesheet" href="{% static "wewe/index_we.css"%}">
+{% endblock %}
+
+{% block content%}
+
+<div class="product-grid">
+  {% for el in work %}
+  <a href="{% url 'work_detail' el.id %}" class="product-card">
+    <div class="product-image">
+      <img src="{{ el.main.url }}" alt="Product Image">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">{{ el.title }}</h3>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% endblock %}
+{% block script%}
+  <script src="{% static "main/index.js"%}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+

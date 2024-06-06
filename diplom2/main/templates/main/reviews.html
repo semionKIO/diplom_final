@@ -1,0 +1,30 @@
+{% extends "main/base.html" %}
+{%load static%}
+<!--<link rel="stylesheet" href="{% static "main/style.css"%}">-->
+<!--{% url 'give_feedback'%}-->
+{% block head%}
+<link rel="stylesheet" href="{% static "main/reviews.css"%}">
+  <title>Отзывы</title>
+{% endblock %}
+{% block content%}
+<button class="btn btn-danger" button onclick="window.location.href = '{% url 'rate'%}'"><i class="fas fa-plus-circle"></i>    Добавить Отзыв</button>
+{% for el in review %}
+<div class="alert alert-danger">
+    <h1>{{el.title}}</h1>
+    <p>{{el.text}}</p>
+    <p class="pp">{{el.date}}</p>
+    <p class="star-rating" data-rating="{{el.estimation}}"></p>
+</div>
+{% endfor %}
+{% endblock %}
+{% block script%}
+<!--  <script src="{% static "main/index.js"%}"></script>-->
+{% endblock %}
+
+
+
+
+
+
+
+

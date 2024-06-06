@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+{%load static%}
+<!--<link rel="stylesheet" href="{% static "main/style.css"%}">-->
+<!--{% url 'give_feedback'%}-->
+{% block head%}
+<link rel="stylesheet" href="{% static "main/index.css"%}">
+<link rel="stylesheet" href="{% static "wewe/new.css"%}">
+{% endblock %}
+
+{% block content%}
+<div class="container">
+    <h1>{{ work.title }}</h1>
+    <p>{{ work.text }}</p>
+    <div class="image-container">
+        <img src="/media/{{ work.left }}">
+        <img src="/media/{{ work.main }}">
+        <img src="/media/{{ work.right }}">
+    </div>
+    <p class="birthday">Дата рождения <br>{{ work.birthday }}</p>
+</div>
+{% endblock %}
+{% block script%}
+  <script src="{% static "main/index.js"%}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+

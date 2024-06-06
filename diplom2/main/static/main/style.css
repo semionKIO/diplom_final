@@ -1,0 +1,88 @@
+{%load static%}
+
+
+header {
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* Высокое значение z-index, чтобы быть над другими элементами */
+  background-color: #fff; /* Цвет фона header */
+  /* Другие стили для header */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.sidebar {
+  z-index: 200;
+  width: 200px;
+  background-color: #ccc;
+  position: fixed;
+  height: 100%;
+  left: -200px;
+  top: 0;
+  transition: left 0.3s;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.content {
+  font-size: 150%;
+  font-family: Arial;
+  margin-top: -110px;
+  margin-left: 100px;
+  padding: 200px;
+  color: black;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.red{
+ background-color: red;
+}
+
+
+
+button:hover {
+  background-color: #45a049;
+}
+
+button, .sidebar li {
+  margin-right: 10px;
+}
+.sidebar button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+
+

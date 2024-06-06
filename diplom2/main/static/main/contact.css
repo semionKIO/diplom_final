@@ -1,0 +1,26 @@
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact {
+  text-align: center; /* Выравнивание по центру */
+}
+
+.contact a {
+  font-size: 3rem; /* Размер иконок */
+  margin: 0 0.5rem; /* Отступы между иконками */
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+.contact p {
+  margin-bottom: 1rem; /* Отступ снизу для текста */
+}
+    .contact-box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 1300px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+

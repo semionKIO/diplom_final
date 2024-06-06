@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+{%load static%}
+
+<!--{% url 'give_feedback'%}-->
+{% block head%}
+<link rel="stylesheet" href="{% static "main/index.css"%}">
+<link rel="stylesheet" href="{% static "main/rate.css"%}">
+  <title>Оставить отзыв</title>
+
+{% endblock %}
+{% block content%}
+<h1>Оставте свой отзыв!</h1>
+    <form method="post" class="farma" >
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.text }}
+        {{ form.estimation }}
+    {{ form.captcha.label_tag }} {{ form.captcha }}
+
+        <br><button class="btn btn-success" type="submit">Отправить</button>
+        <br>
+                <span>{{ error }}</span>
+    </form>
+
+{% endblock %}
+{% block script%}
+  <script src="{% static "main/index.js"%}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
